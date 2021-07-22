@@ -9,7 +9,7 @@ result = []
 for i in range(len(towers)):
 
     while stack:
-        if stack[-1][1] > towers[i]: # 수신 성공
+        if stack[-1][1] > towers[i]:  # 수신 성공
             result.append(stack[-1][0]+1)
             break
         else:
@@ -35,6 +35,6 @@ for i in range(1, n):
             break
         else:  # 수신 실패
             idx = result[idx]-1  # 그 앞자리를 확인 -> 0이 아니면 다시 확인
-            if idx == -1:  #  그  앞자리도 0이면 -> 아예 다음 것을 비교
+            if idx == -1:  # 그 앞자리도 0이면 -> 아예 다음 것을 비교
                 break
 print(*result)
